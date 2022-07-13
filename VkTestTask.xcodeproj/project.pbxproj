@@ -40,6 +40,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C0FDA82287F003B00084E96 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4C76F7A0287EBD1D00746D33 /* JSONFile.swift */,
+				4C76F7A2287EBD5A00746D33 /* Service.swift */,
+				4C76F7A4287EBD6400746D33 /* Body.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		4C76F784287EBC5400746D33 = {
 			isa = PBXGroup;
 			children = (
@@ -59,14 +69,12 @@
 		4C76F78F287EBC5400746D33 /* VkTestTask */ = {
 			isa = PBXGroup;
 			children = (
+				4C0FDA82287F003B00084E96 /* Models */,
 				4C76F790287EBC5400746D33 /* VkTestTaskApp.swift */,
 				4C76F792287EBC5400746D33 /* ContentView.swift */,
 				4C76F794287EBC5500746D33 /* Assets.xcassets */,
 				4C76F796287EBC5500746D33 /* Preview Content */,
 				4C76F79E287EBC9500746D33 /* DecodeFileInList.swift */,
-				4C76F7A0287EBD1D00746D33 /* JSONFile.swift */,
-				4C76F7A2287EBD5A00746D33 /* Service.swift */,
-				4C76F7A4287EBD6400746D33 /* Body.swift */,
 			);
 			path = VkTestTask;
 			sourceTree = "<group>";
