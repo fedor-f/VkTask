@@ -67,7 +67,7 @@ struct Decoder {
     
     func decode() -> [Service] {
         let decoder = JSONDecoder()
-
+        
         do {
             let obj = try decoder.decode(JSONFile.self, from: json)
             return obj.body.services
@@ -77,4 +77,3 @@ struct Decoder {
         return [Service]()
     }
 }
-

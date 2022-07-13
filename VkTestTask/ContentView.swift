@@ -8,31 +8,27 @@ struct ContentView: View {
             VStack {
                 List {
                     ForEach(services, id: \.name) { service in
-                            HStack {
-                                AsyncImage(url: URL(string: service.icon_url)) { image in
-                                    image
-                                        .resizable()
-                                        .scaledToFit()
-                                } placeholder: {
-                                    Color.brown
-                                }.frame(width: 55.0, height: 55.0)
-                                
-                                VStack {
-                                    Text(service.name)
-                                        .frame(maxWidth: .infinity, alignment: .bottomLeading)
-                                    Text(service.description)
-                                        .font(.system(size: 14))
-                                        .fixedSize(horizontal: false, vertical: true)
-                                        .frame(maxWidth: .infinity, alignment: .leading)
-                                }
+                        HStack {
+                            AsyncImage(url: URL(string: service.icon_url)) { image in
+                                image
+                                    .resizable()
+                                    .scaledToFit()
+                            } placeholder: {
+                                Color.brown
+                            }.frame(width: 55.0, height: 55.0)
+                            
+                            VStack {
+                                Text(service.name)
+                                    .frame(maxWidth: .infinity, alignment: .bottomLeading)
+                                Text(service.description)
+                                    .font(.system(size: 14))
+                                    .fixedSize(horizontal: false, vertical: true)
+                                    .frame(maxWidth: .infinity, alignment: .leading)
                             }
-                            .onTapGesture {
-                                if UIApplication.shared.canOpenURL(URL(string: service.link)! as URL) {
-                                        UIApplication.shared.open(URL(string: service.link)!)
-                                    } else {
-                                        UIApplication.shared.open(URL(string: service.link)!)
-                                    }
-                            }
+                        }
+                        .onTapGesture {
+                            UIApplication.shared.open(URL(string: service.link)!)
+                        }
                     }
                 }
             }
